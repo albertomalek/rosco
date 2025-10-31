@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/rosco/static/css/main.9d2669b5.css",
+    "main.js": "/rosco/static/js/main.49a7b84b.js",
+    "static/js/453.ad632fe0.chunk.js": "/rosco/static/js/453.ad632fe0.chunk.js",
+    "index.html": "/rosco/index.html",
+    "main.9d2669b5.css.map": "/rosco/static/css/main.9d2669b5.css.map",
+    "main.49a7b84b.js.map": "/rosco/static/js/main.49a7b84b.js.map",
+    "453.ad632fe0.chunk.js.map": "/rosco/static/js/453.ad632fe0.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9d2669b5.css",
+    "static/js/main.49a7b84b.js"
+  ]
+}
