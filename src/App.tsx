@@ -3,13 +3,13 @@ import { useEffect, useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import './App.css';
 
-interface ItemRosco {
+export interface ItemRosco {
   letra: letras;
   label: string;
   definicion: string;
 } 
 
-enum letras {
+export enum letras {
   a = 'a',
   b = 'b',
   c = 'c',
@@ -82,7 +82,7 @@ const definiciones: ItemRosco[] = [
   {
     letra: letras.b,
     label: 'Empieza con B',
-    definicion: 'Pieza pequeña de chocolate, que en su interior puede contener licor, crema u otro relleno..',
+    definicion: 'Pieza pequeña de chocolate, que en su interior puede contener licor, crema u otro relleno.',
   },
   {
     letra: letras.c,
@@ -92,7 +92,7 @@ const definiciones: ItemRosco[] = [
   {
     letra: letras.d,
     label: 'Empieza con D',
-    definicion: 'En los juegos de azar, objeto generalmente cúbico en cuyas caras aparecen puntos, que representan distintos números, o figuras diferentes.',
+    definicion: 'Ocultar o encubrir con astucia lo que se piensa o siente.',
   },
   {
     letra: letras.e,
@@ -102,17 +102,17 @@ const definiciones: ItemRosco[] = [
   {
     letra: letras.f,
     label: 'Empieza con F',
-    definicion: 'Hueso que forma el esqueleto del muslo, que se articula por arriba con el hueso ilíaco y por abajo con la tibia y la rótula.',
+    definicion: 'Medicamento elaborado con una molécula específica.',
   },
   {
     letra: letras.g,
     label: 'Empieza con G',
-    definicion: 'Hacer que un alimento se tueste por encima en el horno.',
+    definicion: 'Natural de Guatemala, país de América, o de su capital.',
   },
   {
     letra: letras.h,
     label: 'Empieza con H',
-    definicion: 'Serie de dibujos que constituye un relato cómico, fantástico, de aventuras, etcétera, con texto o sin él, y que puede ser una simple tira en la prensa, una o varias páginas, o un libro.',
+    definicion: 'Acto o serie de actos que se celebran en honor de alguien o de algo.',
   },
   {
     letra: letras.i,
@@ -122,7 +122,7 @@ const definiciones: ItemRosco[] = [
   {
     letra: letras.j,
     label: 'Empieza con J',
-    definicion: 'Pensión que recibe quien se ha jubilado.',
+    definicion: 'Período de la vida humana que precede inmediatamente a la madurez.',
   },
 
   {
@@ -146,11 +146,11 @@ const definiciones: ItemRosco[] = [
   },{
     letra: letras.o,
     label: 'Empieza con O',
-    definicion: 'En algunos deportes, cada una de las dificultades que presenta una pista.',
+    definicion: 'Impedimento, dificultad, inconveniente.',
   },{
     letra: letras.p,
     label: 'Empieza con P',
-    definicion: 'Hijo del tío de una persona.',
+    definicion: 'Sumamente atento, preocupado por algo que se espera o sucede.',
   },{
     letra: letras.q,
     label: 'Contiene la Q',
@@ -158,19 +158,19 @@ const definiciones: ItemRosco[] = [
   },{
     letra: letras.r,
     label: 'Empieza con R',
-    definicion: 'Natural de Rosario, ciudad de la provincia de Santa Fe, en la Argentina. Usado también como sustantivo.',
+    definicion: 'Efecto y consecuencia de un hecho, operación o deliberación.',
   },{
     letra: letras.s,
     label: 'Empieza con S',
-    definicion: 'Estimar a alguien o algo por debajo de su valor.',
+    definicion: 'Estado en que el ser orgánico ejerce normalmente todas sus funciones.',
   },
   {
     letra: letras.t,
     label: 'Empieza con T',
-    definicion: 'Líquido coloreado que se emplea para escribir o dibujar, mediante un instrumento apropiado.',
+    definicion: 'Persona que posee los conocimientos especiales de una ciencia o arte.',
   },{
     letra: letras.u,
-    label: 'Contiene con U',
+    label: 'Contiene la U',
     definicion: 'Dicho especialmente del lenguaje: Que puede entenderse de varios modos o admitir distintas interpretaciones y dar, por consiguiente, motivo a dudas, incertidumbre o confusión.',
   },{
     letra: letras.v,
@@ -195,14 +195,14 @@ const initalFormValues:TDefincionesFormValues  = {
   a: {
     value: '',
     letra: 'a',
-    respuestas: ['anonimo', 'anónimo', 'anònimo', 'anonima', 'anónima', 'anònima'],
+    respuestas: ['anónimo', 'anonimo', 'anònimo', 'anonima', 'anónima', 'anònima'],
     state: 'pendiente',
     puntaje: 0
   },
   b: {
     value: '',
     letra: 'b',
-    respuestas: ['bombon', 'bombón'],
+    respuestas: ['bombón', 'bombon'],
     state: 'pendiente',
     puntaje: 0
   },
@@ -216,7 +216,7 @@ const initalFormValues:TDefincionesFormValues  = {
   d: {
     value: '',
     letra: 'd',
-    respuestas: ['dado'],
+    respuestas: ['disimular'],
     state: 'pendiente',
     puntaje: 0
   },
@@ -230,21 +230,21 @@ const initalFormValues:TDefincionesFormValues  = {
   f: {
     value: '',
     letra: 'f',
-    respuestas: ['fémur', 'femur'],
+    respuestas: ['fármaco', 'farmaco'],
     state: 'pendiente',
     puntaje: 0
   },
   g: {
     value: '',
     letra: 'g',
-    respuestas: ['gratinar'],
+    respuestas: ['guatemalteco', 'guatemalteca'],
     state: 'pendiente',
     puntaje: 0
   },
   h: {
     value: '',
     letra: 'h',
-    respuestas: ['historieta'],
+    respuestas: ['homenaje'],
     state: 'pendiente',
     puntaje: 0
   },
@@ -258,7 +258,7 @@ const initalFormValues:TDefincionesFormValues  = {
   j: {
     value: '',
     letra: 'j',
-    respuestas: ['jubilacion', 'jubilación'],
+    respuestas: ['juventud'],
     state: 'pendiente',
     puntaje: 0
   },
@@ -300,7 +300,7 @@ const initalFormValues:TDefincionesFormValues  = {
   p: {
     value: '',
     letra: 'p',
-    respuestas: ['primo'],
+    respuestas: ['pendiente'],
     state: 'pendiente',
     puntaje: 0
   },
@@ -314,21 +314,21 @@ const initalFormValues:TDefincionesFormValues  = {
   r: {
     value: '',
     letra: 'r',
-    respuestas: ['rosarino'],
+    respuestas: ['resultado'],
     state: 'pendiente',
     puntaje: 0
   },
   s: {
     value: '',
     letra: 's',
-    respuestas: ['subestimar'],
+    respuestas: ['salud'],
     state: 'pendiente',
     puntaje: 0
   },
   t: {
     value: '',
     letra: 't',
-    respuestas: ['tinta'],
+    respuestas: ['técnico', 'tecnico', 'técnica', 'tecnica'],
     state: 'pendiente',
     puntaje: 0
   },
@@ -342,14 +342,14 @@ const initalFormValues:TDefincionesFormValues  = {
   v: {
     value: '',
     letra: 'v',
-    respuestas: ['vocacion', 'vocación'],
+    respuestas: ['vocación', 'vocacion'],
     state: 'pendiente',
     puntaje: 0
   },
   x: {
     value: '',
     letra: 'x',
-    respuestas: ['excepcion', 'excepción'],
+    respuestas: ['excepción', 'excepcion'],
     state: 'pendiente',
     puntaje: 0
   },
@@ -489,17 +489,17 @@ function App() {
         <div className={`flex flex-col items-center ${isMobile ? 'gap-16' : 'gap-24'}`}>
           <h1>Shabbaton Colel Ereb 2025</h1>
           <div className={`flex flex-col text-center gap-8 ${isMobile ? '' : 'font-size-20'}`}>
-            <p>Aparecerán definciones y deberás encotrar la palabara exacta a la cual se refiere según la letra que corresponda.</p>
-            <p>Prestá atención a la consigna, en algunos casos buscamos la palabra que comienze con esa letra y en otros que solo la contengan.</p>
+            <p>Aparecerán definiciones y deberás encontrar la palabra exacta a la cual se refiere según la letra que corresponda.</p>
+            <p>Prestá atención a la consigna, en algunos casos buscamos la palabra que comience con esa letra y en otros que solo la contengan.</p>
             <p>Por cada palabra tendrás 10 segundos para responder, pero tené en cuenta que tendrás la posibilidad de responder en otras rondas.</p>
             <p>Tendrás tres rondas para ir respondiendo, eso te permitirá pensarlo y asi no tener que arriesgar sin saber.</p>
-            <p>Si respondes correctamente en la primera ronda obtendrás 3 puntos, mientras que si lo hacés en la segunda 2 y un punto en la tercera y última ronda.</p>
-            <p>Tené en cuenta que si respondes de manera incorrecta ya no tendrás otra oportunidad para esa palabara.</p>
-            <p>La respuesta incorrecta no resta puntos, si estás en la última ronda, jugatela!</p>
+            <p>Si respondés correctamente en la primera ronda obtendrás 3 puntos, mientras que si lo hacés en la segunda 2, y un punto en la tercera y última ronda.</p>
+            <p>Tené en cuenta que si respondés de manera incorrecta ya no tendrás otra oportunidad para esa palabara.</p>
+            <p>La respuesta incorrecta no resta puntos, si estás en la última ronda, arriesgate!</p>
             <p>Entre cada ronda tendrás 30 segundos para repasar de memoria y pensar en las palabras que no has podido responder.</p>
             <p>Además tendrás esos 10 segundos por letra, si ya la respondiste usalos para pensar.</p>
             <p>Sean estrategas y pongan incapié en recordar las definiciones para que el tiempo de pensar sea útil.</p>
-            <p>Presta atención en escribirla correctamente ya que sino no será tomada como correcta.</p>
+            <p>Prestá atención en escribirla correctamente ya que sino no será tomada como correcta.</p>
             <p>Si completás todas correctas sin importar en que ronda, sumás 10 puntos extras!</p>
           </div>
           <button type="button" className={`btn btn-primary ${isMobile ? 'w-full font-size-20' : 'p-24 font-size-36'}`} onClick={iniciarJuego}>Iniciar Juego</button>
@@ -573,8 +573,8 @@ function App() {
                             ${formValues[item.letra].state === 'correcto' ? 'card-mobile-correcto' 
                             : formValues[item.letra].state === 'incorrecto' ? 'card-mobile-incorrecto' : 'card-mobile-pendiente'}`} >
                             <p>{item.label}</p>
-                            <p className='font-size-18 max-width-500 font-weight-600'>{item.definicion}</p>
-                            <p>Respuesta Correcta: {formValues[item.letra].respuestas[0]}</p>
+                            <p className='font-size-20 max-width-500 weight-600'>{item.definicion}</p>
+                            <p>Respuesta Correcta: <span className='weight-600 font-size-20'>{formValues[item.letra].respuestas[0].toUpperCase()}</span></p>
                             <p>{formValues[item.letra].state === 'pendiente' ? 'Sin Responder' : `Tu respuesta: ${formValues[item.letra].value}` }</p>
                             <p>Puntos obtenidos: {formValues[item.letra].puntaje}</p>
                           </div>
